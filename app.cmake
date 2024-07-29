@@ -19,7 +19,7 @@ function(cx_add_app _target)
     foreach(v IN LISTS ARGN)
         add_dependencies(${_target} ${v})
         target_link_libraries(${_target} ${v})
-        #MESSAGE(STATUS "lib:" ${v})
+        MESSAGE(STATUS "  + lib:" ${v})
     endforeach()
 
     install(TARGETS ${_target} RUNTIME DESTINATION bin)
